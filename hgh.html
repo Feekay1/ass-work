@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS CLASS</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .ludo-board{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 600px;
+            height: 600px;
+            border: 4px solid black;
+        }
+        .square{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+        }
+        .red{
+            background-color: #ff4d4d; grid-area: 1 / 1;
+        }
+        .yellow{
+            background-color: yellow; grid-area: 1 / 3;
+        }
+        .blue{
+            background-color: blue; grid-area: 3 / 1;
+        }
+        .green{
+            background-color: green; grid-area: 3 / 3;
+        }
+        .home{
+            width: 70%;
+            height: 70%;
+            background: white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .token{
+            background: black;
+            border-radius: 50%;
+        }
+        .center{
+            grid-area: 2 / 2;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .triangle{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .triangle.red{
+            border-width: 100px 100px 0 0;
+            border-color: red transparent transparent transparent;
+            top: 0; left: 0;
+        }
+        .triangle.yellow{
+            border-width: 0 0 100px 100px;
+            border-color: transparent transparent yellow transparent;
+            bottom: 0; right: 0;
+        }
+        .triangle.blue{
+            border-width: 0 0 100px 100px;
+            border-color: blue transparent transparent transparent;
+            bottom: 0; left: 0;
+        }
+        .triangle.green{
+            border-width: 0 0 100px 100px;
+            border-color: transparent green transparent transparent;
+            top: 0; left: 0;
+        }
+        .path{
+            display: grid;
+            border: 2px solid black;
+        }
+        .path.horizontal{
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .path.top{grid-area: 1 / 2;}
+        .path.left{grid-area:2 / 1;}
+        .path.right{grid-area:2 / 3;}
+        .path.bottom{grid-area:2 / 3;}
+        /* .path.top{
+            grid-area: 3 / 2;
+        } */
+        .path.vertical{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+        /* .path.left{ */
+            /* grid-area: 2 / 1; */
+        }
+        /* .path.right{
+            grid-area: 2 / 3; */
+        }
+        .path div{
+            border: 1px solid #0c0c0c;
+            background: white;
+        }
+        .path.top div:nth-child(4){
+            background: #ff4d4d;
+        }
+        .path.top div:nth-child(16){
+            background: yellow;
+        }
+        .path.top div:nth-child(15){
+            background: blue;
+        }
+        .path.top div:nth-child(7){
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="index.html">Index</a><br>
+        </li>
+        <li>
+            <a href="ur.html">UR file</a><br>
+        </li>
+        <li>
+            <a href="u.html">U file</a><br>
+        </li>
+        <li>
+            <a href="th.html">TH file</a><br>
+        </li>
+        <li>
+            <a href="t.html">T file</a><br>
+        </li>
+        <li>
+            <a href="r.html">R file</a><br>
+        </li>
+        <li>
+            <a href="j.html">J file</a><br>
+        </li>
+        <li>
+            <a href="home.html">HOME file</a><br>
+        </li>
+        <li>
+            <a href="g.html">G file</a><br>
+        </li>
+        <li>
+            <a href="f.html">F file</a><br>
+        </li>
+        <li>
+            <a href="df.html">DF file</a><br>
+        </li>
+        <li>
+            <a href="d.html">D file</a><br>
+        </li>
+        <li>
+            <a href="class.html">CLASS file</a><br>
+        </li>
+        <li>
+            <a href="ass.html">ASS file</a><br>
+        </li>
+        <li>
+            <a href="gh.html">GH file</a><br>
+        </li>
+        <li>
+            <a href="sa.html">SA file</a><br>
+        </li>
+        <li>
+            <a href="dfg.html">DFG FILE</a><br>
+        </li>
+        <li>
+            <a href="redd.html">REDD FILE</a><br>
+        </li>
+        <li>
+            <a href="dhdhd.html">DHDHD FILE</a><br>
+        </li>
+        <li>
+            <a href="ccx.html">CCX FILE</a><br>
+        </li>
+        <li>
+            <a href="ettr.html">ETTR FILE</a><br>
+        </li>
+        <li>
+            <a href="hgh.html">HGH FILE</a><br>
+        </li>
+    </ul>
+    <div class="ludo-board">
+
+        <!-- <red section> -->
+        <div class="square red">
+            <div class="home">
+                <div class="token"></div>
+                <div class="token"></div>
+                <div class="token"></div>
+                <div class="token"></div>
+            </div>
+        </div>
+
+        <!-- <yellow section> -->
+            <div class="square yellow">
+                <div class="home">
+                    <div class="token"></div>
+                    <div class="token"></div>
+                    <div class="token"></div>
+                    <div class="token"></div>
+                </div>
+            </div>
+
+            <!-- < blue section> -->
+        <div class="square blue">
+            <div class="home">
+                <div class="token"></div>
+                <div class="token"></div>
+                <div class="token"></div>
+                <div class="token"></div>
+            </div>
+        </div>
+
+        <!-- <green section> -->
+            <div class="square green">
+                <div class="home">
+                    <div class="token"></div>
+                    <div class="token"></div>
+                    <div class="token"></div>
+                    <div class="token"></div>
+                </div>
+            </div>
+
+            <!-- <widdle section> -->
+        <div class="center">
+                <div class="triangle red"></div>
+                <div class="triangle yellow"></div>
+                <div class="triangle blue"></div>
+                <div class="triangle green"></div>
+        </div>
+
+        <div class="path horizontal top">
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="path horizontal bottom">
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="path horizontal left">
+           <div></div><div></div><div></div>
+           <div></div><div></div><div></div> 
+           <div></div><div></div><div></div>
+           <div></div><div></div><div></div>
+           <div></div><div></div><div></div>
+           <div></div><div></div><div></div>
+        </div>
+        <div class="path horizontal right">
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+        </div>
+    </div>
+</body>
+</html>
